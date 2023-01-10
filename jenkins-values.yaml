@@ -11,6 +11,7 @@ controller:
   - timestamper
   - github
 
+  jenkinsUriPrefix: "/jenkins"
   ingress: # this tells Kubernetes to create an ingress object that gives us access to jenkins
     enabled: true
     # Override for the default paths that map requests to the backend
