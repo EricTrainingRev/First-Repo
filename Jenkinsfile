@@ -28,6 +28,10 @@ pipeline{ // the entire Jenkins Job needs to go inside the pipeline section
                     script{
                         // build(image name and tag, location of dockerfile)
                         DEVOPS_IMAGE= docker.build(DEVOPS_REGISTRY,".") 
+                        // withRegistry(repo location empty string if docker hub, docker credentials)
+                        docker.withRegistry("", 'docker-creds'){
+                            DEVOPS_IMAGE.push("$currentBuild.number")
+                        }
                     }                    
                 }
             }
