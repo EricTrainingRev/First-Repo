@@ -23,6 +23,11 @@ pipeline{ // the entire Jenkins Job needs to go inside the pipeline section
             // steps is where the actual commands go
             steps{
                 echo "print something to the console"
+                // the script section is sometimes needed when using functions provided by Jenkins plugins
+                script{
+                    // build(image name and tag, location of dockerfile)
+                    DEVOPS_IMAGE= docker.build(DEVOPS_REGISTRY,".") 
+                }
             }
         }
     }
