@@ -22,7 +22,7 @@ pipeline{ // the entire Jenkins Job needs to go inside the pipeline section
         stage("build and push docker image"){
             // steps is where the actual commands go
             steps{
-                echo "print something to the console"
+                // echo "print something to the console"
                 container("docker"){
                     // the script section is sometimes needed when using functions provided by Jenkins plugins    
                     script{
