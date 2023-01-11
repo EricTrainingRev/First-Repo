@@ -22,7 +22,7 @@ controller:
 
 agent:
   podTemplate:
-    greeting: |
+    devops: |
         - name: devops
           label: jenkins-devops
           serviceAccount: jenkins
