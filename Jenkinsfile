@@ -20,6 +20,7 @@ pipeline{ // the entire Jenkins Job needs to go inside the pipeline section
     stages{
         // this is where the steps of the job will be defined
         stage("build and push docker image"){
+            // steps is where the actual commands go
             steps{
                 echo "print something to the console"
             }
