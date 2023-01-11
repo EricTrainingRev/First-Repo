@@ -23,8 +23,8 @@ controller:
 agent:
   podTemplate:
     greeting: |
-        - name: greeting
-          label: jenkins-greeting
+        - name: devops
+          label: jenkins-devops
           serviceAccount: jenkins
           containers:
           - name: docker
